@@ -1,18 +1,31 @@
+from dataclasses import dataclass
+from datetime import date
+from shelve import Shelf
 from neomodel import (config, StructuredNode, StringProperty, IntegerProperty,
     UniqueIdProperty, RelationshipTo, BooleanProperty, EmailProperty, Relationship, db)
 from pprint import pprint
 
 class neoAPI():
 
-    def __init__(self):
-        self.instantiate_neo_model_session()    
+    def __init__(self,uri,user,psw):
+        self.db_init = self.instantiate_neo_model_session(uri,user,psw)    
         
     
-    def instantiate_neo_model_session(self):
+    def instantiate_neo_model_session(uri,user,psw):
         
-        local = "bolt://neo4j:5995Oscar@10.0.0.37:7687"
-        remote = "bolt://neo4j:pulses-blank-dittos@54.147.65.170:7687"
-        config.DATABASE_URL = local
+        #config.DATABASE_URL = 'neo4j+s://{}:{}@{}'.format(user, psw, uri)
+        config.DATABASE_URL ='bolt://neo4j:beautiful@localhost:7687'
+        #config.DATABASE_URL = uri
+        return True
+
+
+    def standard_query():
+        results, meta = db.cypher_query(query, params)
+        people = [Person.inflate(row[0]) for row in results]
+
+    def create_case_node(date, dates, group,name, pdf, shelf_id, subject, title, url, subject_relationship = True):
+        return Case(date=date, dates=dates, group=group,name=name, pdf=pdf, shelf_id=shelf_id, subject=subject, title=title, url=url)
+
 
     def create_city_node(name):
         return City(name = name)
@@ -47,13 +60,31 @@ class neoAPI():
 
         #print("{}"+".connect" + "{}".format(source,target))
         
-        
-        
+    def create_subject_node(name = None,):
+        return Subject(name = name)
 
     def update(obj):
         with db.transaction:
             return obj.save()
 
+class Subject(StructuredNode):
+    uuid = UniqueIdProperty()
+    name = StringProperty(unique_index=True, required=True)
+
+
+class Case(StructuredNode):
+    uid = UniqueIdProperty()
+    date = StringProperty(unique_index=True, required=True)
+    dates = StringProperty(unique_index=True, required=True)
+    group = StringProperty(unique_index=True, required=True)
+    name = StringProperty(unique_index=True, required=True)
+    pdf = StringProperty(unique_index=True, required=True) 
+    shelf_id = StringProperty(unique_index=True, required=True)
+    subject = StringProperty(unique_index=True, required=True)
+    #primary_topic = StringProperty(unique_index=True, required=True)
+    title = StringProperty(unique_index=True, required=True)
+    url = StringProperty(unique_index=True, required=True)
+    subject_relationship = Relationship("Subject", "IS_SUBJECT")
 
 class Processed(StructuredNode):
     uid = UniqueIdProperty()

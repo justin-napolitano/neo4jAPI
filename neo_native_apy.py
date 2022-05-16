@@ -268,6 +268,24 @@ class NeoApp:
     def close(self):
         # Don't forget to close the driver connection when you are finished with it
         self.driver.close()
+
+    def run_test_query(self):
+        print("testing")
+        limit = 10
+        cypher_query = f'''
+        MATCH (n)
+        RETURN COUNT(n) AS count
+        LIMIT {limit}
+        '''
+
+
+        with self.driver.session(database="neo4j") as session:
+            results = session.read_transaction(
+                lambda tx: tx.run(cypher_query).data())
+            #for record in results:
+            #    print(record['count'])
+            results = [x['count'] for x in results]
+        return results
         
 
     def create_friendship(self, person1_name, person2_name):
@@ -316,11 +334,11 @@ class NeoApp:
 
 
     def query(self, query, parameters=None, db=None):
-        assert self.__driver is not None, "Driver not initialized!"
+        assert self.driver is not None, "Driver not initialized!"
         session = None
         response = None
         try: 
-            session = self.__driver.session(database=db) if db is not None else self.__driver.session() 
+            session = self.driver.session(database=db) if db is not None else self.driver.session() 
             response = list(session.run(query, parameters))
         except Exception as e:
             print("Query failed:", e)
@@ -332,9 +350,10 @@ class NeoApp:
 
 if __name__ == "__main__":
     # Aura queries use an encrypted connection using the "neo4j+s" URI scheme
-    uri = "neo4j+s://b121e108.databases.neo4j.io"
-    user = "<neo4j>"
-    password = "<STbDZyKf5_5Nd26AkXcpI__XnGX2VjKfbVY_rPO3uYI>"
+    uri = "neo4j+s://7a92f171.databases.neo4j.io"
+    #uri = "neo4j+s://b121e108.databases.neo4j.io"
+    user = "neo4j"
+    password = "RF4Gr2IJTNhHlW6HOrLDqz_I2E2Upyh7o8paTwfnCxg"
     neo_app = NeoApp(uri, user, password)
     #app.create_friendship("Alice", "David")
     #app.find_person("Alice")
