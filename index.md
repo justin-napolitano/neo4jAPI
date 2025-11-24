@@ -23,6 +23,12 @@ seoSecondaryKeywords:
   - rest api
   - containerization
 seoOptimized: true
+topicFamily: datascience
+topicFamilyConfidence: 0.9
+topicFamilyNotes: >-
+  The post focuses on Python tools for Neo4j graph data management, including driver wrappers, data
+  ingestion pipelines, and data processing with pandas and PySpark. These relate closely to ETL
+  pipelines and data workflows characteristic of the 'datascience' family in the catalog.
 ---
 
 # neo4jAPI: A Technical Overview and Reference
@@ -92,3 +98,4 @@ This repository provides a pragmatic set of tools for working with Neo4j in Pyth
 ---
 
 *This document is intended as a technical reference for developers returning to the project or integrating Neo4j with Python-based workflows.*
+
