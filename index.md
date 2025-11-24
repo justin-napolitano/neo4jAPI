@@ -1,12 +1,29 @@
 ---
-slug: "github-neo4japi"
-title: "neo4jAPI"
-repo: "justin-napolitano/neo4jAPI"
-githubUrl: "https://github.com/justin-napolitano/neo4jAPI"
-generatedAt: "2025-11-23T09:20:22.720115Z"
-source: "github-auto"
+slug: github-neo4japi
+title: 'neo4jAPI: Python Tools for Neo4j Driver, Data Ingestion, and REST API'
+repo: justin-napolitano/neo4jAPI
+githubUrl: https://github.com/justin-napolitano/neo4jAPI
+generatedAt: '2025-11-23T09:20:22.720115Z'
+source: github-auto
+summary: >-
+  Technical overview of neo4jAPI, providing Python wrappers, data pipelines, and REST endpoints for
+  streamlined Neo4j interaction and containerized setups.
+tags:
+  - neo4j
+  - python
+  - neomodel
+  - rest-api
+  - data-ingestion
+  - containerization
+seoPrimaryKeyword: neo4japi
+seoSecondaryKeywords:
+  - neo4j python driver
+  - neomodel
+  - data ingestion
+  - rest api
+  - containerization
+seoOptimized: true
 ---
-
 
 # neo4jAPI: A Technical Overview and Reference
 
