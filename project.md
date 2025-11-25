@@ -7,8 +7,8 @@ githubUrl: https://github.com/justin-napolitano/neo4jAPI
 generatedAt: '2025-11-24T21:35:42.012Z'
 source: github-auto
 summary: >-
-  Explore Python extensions for Neo4j, including data ingestion, REST API
-  wrappers, and local setup with Docker or Podman.
+  Explore Python extensions for Neo4j, including data ingestion, REST API wrappers, and local setup
+  with Docker or Podman.
 tags:
   - neo4j
   - python
@@ -25,8 +25,8 @@ seoSecondaryKeywords:
   - data ingestion pipelines
   - python neo4j driver
 seoOptimized: true
-topicFamily: null
-topicFamilyConfidence: null
+topicFamily: datascience
+topicFamilyConfidence: 0.8
 kind: project
 entryLayout: project
 showInProjects: true
@@ -146,3 +146,4 @@ Repository URL: [https://github.com/justin-napolitano/neo4jAPI](https://github.c
 ---
 
 *Note: Some credentials and URIs in the code samples are placeholders or sensitive and should be replaced or secured appropriately.*
+
