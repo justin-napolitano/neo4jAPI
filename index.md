@@ -1,13 +1,13 @@
 ---
 slug: github-neo4japi
-title: 'neo4jAPI: Python Tools for Neo4j Driver, Data Ingestion, and REST API'
+title: 'neo4jAPI: Streamlining Neo4j with Python Utilities'
 repo: justin-napolitano/neo4jAPI
 githubUrl: https://github.com/justin-napolitano/neo4jAPI
 generatedAt: '2025-11-23T09:20:22.720115Z'
 source: github-auto
 summary: >-
-  Technical overview of neo4jAPI, providing Python wrappers, data pipelines, and REST endpoints for
-  streamlined Neo4j interaction and containerized setups.
+  Explore the neo4jAPI project, which simplifies Neo4j interactions in Python
+  through driver wrappers, data pipelines, and REST API integration.
 tags:
   - neo4j
   - python
@@ -15,20 +15,29 @@ tags:
   - rest-api
   - data-ingestion
   - containerization
-seoPrimaryKeyword: neo4japi
-seoSecondaryKeywords:
-  - neo4j python driver
-  - neomodel
   - data ingestion
-  - rest api
-  - containerization
+  - flask
+  - docker
+  - api development
+  - graph databases
+seoPrimaryKeyword: neo4j python utilities
+seoSecondaryKeywords:
+  - neo4j driver wrappers
+  - data ingestion pipelines
+  - flask rest api
+  - object graph mapping
+  - docker neo4j
+  - python graph database integration
 seoOptimized: true
 topicFamily: datascience
 topicFamilyConfidence: 0.9
 topicFamilyNotes: >-
-  The post focuses on Python tools for Neo4j graph data management, including driver wrappers, data
-  ingestion pipelines, and data processing with pandas and PySpark. These relate closely to ETL
-  pipelines and data workflows characteristic of the 'datascience' family in the catalog.
+  The post focuses on Python tools for Neo4j graph data management, including
+  driver wrappers, data ingestion pipelines, and data processing with pandas and
+  PySpark. These relate closely to ETL pipelines and data workflows
+  characteristic of the 'datascience' family in the catalog.
+kind: project
+id: github-neo4japi
 ---
 
 # neo4jAPI: A Technical Overview and Reference
