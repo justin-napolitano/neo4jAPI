@@ -1,21 +1,30 @@
 ---
 slug: github-neo4japi
 id: github-neo4japi
-title: neo4jAPI
+title: 'Neo4j API: Python Extensions for Graph Database Interaction'
 repo: justin-napolitano/neo4jAPI
 githubUrl: https://github.com/justin-napolitano/neo4jAPI
 generatedAt: '2025-11-24T21:35:42.012Z'
 source: github-auto
 summary: >-
-  Some basic Neo4j Python extensions built on top of the official Neo4j Python
-  library. This repository provides utilities and abstractions to facilitate
-  interaction with Neo4j graph databases, including data ingestion, node and
-  relationship management, and REST API wrappers. The codebase is under active
-  development and will be refactored soon.
-tags: []
-seoPrimaryKeyword: ''
-seoSecondaryKeywords: []
-seoOptimized: false
+  Explore Python extensions for Neo4j, including data ingestion, REST API
+  wrappers, and local setup with Docker or Podman.
+tags:
+  - neo4j
+  - python
+  - flask
+  - docker
+  - podman
+  - data ingestion
+  - neomodel
+seoPrimaryKeyword: neo4j python extensions
+seoSecondaryKeywords:
+  - neo4j database interaction
+  - flask rest api
+  - docker neo4j setup
+  - data ingestion pipelines
+  - python neo4j driver
+seoOptimized: true
 topicFamily: null
 topicFamilyConfidence: null
 kind: project
